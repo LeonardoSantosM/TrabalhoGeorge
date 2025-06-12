@@ -1,0 +1,91 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Transporte {
+    private int id;
+    private LocalDate dataEntrada; 
+    private LocalDate dataSaida; 
+    private LocalTime horaChegada;
+    private LocalTime horaSaida;
+    private Armazem origem; 
+    private Armazem destino; 
+    private Agente agenteResponsavel; 
+
+    public Transporte(int id, LocalDate dataEntrada, LocalDate dataSaida, LocalTime horaChegada, LocalTime horaSaida, Armazem origem, Armazem destino) {
+        this.id = id;
+        this.dataEntrada = dataEntrada;
+        this.dataSaida = dataSaida;
+        this.horaChegada = horaChegada;
+        this.horaSaida = horaSaida;
+        this.origem = origem;
+        this.destino = destino;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public LocalDate getDataEntrada() {
+        return dataEntrada;
+    }
+
+    public void setDataEntrada(LocalDate dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+
+    public LocalDate getDataSaida() {
+        return dataSaida;
+    }
+
+    public void setDataSaida(LocalDate dataSaida) {
+        this.dataSaida = dataSaida;
+    }
+
+    public LocalTime getHoraChegada() {
+        return horaChegada;
+    }
+
+    public void setHoraChegada(LocalTime horaChegada) {
+        this.horaChegada = horaChegada;
+    }
+
+    public LocalTime getHoraSaida() {
+        return horaSaida;
+    }
+
+    public void setHoraSaida(LocalTime horaSaida) {
+        this.horaSaida = horaSaida;
+    }
+
+    public Armazem getOrigem() {
+        return origem;
+    }
+
+    public void setOrigem(Armazem origem) {
+        this.origem = origem;
+    }
+
+    public Armazem getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Armazem destino) {
+        this.destino = destino;
+    }
+
+    public Agente getAgenteResponsavel() {
+        return agenteResponsavel;
+    }
+
+    public void setAgenteResponsavel(Agente agenteResponsavel) {
+        this.agenteResponsavel = agenteResponsavel;
+    }
+
+    public void cadastrarTransporte() { 
+        System.out.println("Transporte (ID: " + this.id + ") registrado.");
+    }
+}

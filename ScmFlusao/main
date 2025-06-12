@@ -1,0 +1,37 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class Main {
+    public static void main(String[] args) {
+        Interface ui = new Interface();
+
+        System.out.println("--- Registrando produtos e itens ---");
+        ui.cadastrarProduto(1, "Laptop", "Eletronico", "disponivel", 101, "RAM 8GB");
+        System.out.println("\n");
+
+       
+        System.out.println("--- Registrando Agente ---");
+        ui.cadastrarAgente(10, "Ruan Correia");
+        System.out.println("\n");
+
+        System.out.println("--- Registrando Transporte ---");
+        
+        Pais brasil = new Pais(1, "Brasil");
+        Cidade rio = new Cidade(1, "Rio de Janeiro", brasil);
+        Armazem armazemA = new Armazem(1, "Gastao Gonçalves");
+        Armazem armazemB = new Armazem(2, "North Warehouse B");
+        Agente agentedoTransporte = new Agente(11, "Joao das couves");
+
+        rio.adicionarArmazem(armazemA);
+        rio.adicionarArmazem(armazemB);
+
+        
+        LocalDate dataEntrada = LocalDate.of(2025, 5, 29);
+        LocalDate dataSaida = LocalDate.of(2025, 5, 30);
+        LocalTime horaChegada = LocalTime.of(10, 0);
+        LocalTime horaSaida = LocalTime.of(18, 0);
+
+        ui.cadastrarTransporte(1001, dataEntrada, dataSaida, horaChegada, horaSaida, armazemA, armazemB,  agenteDoTransporte);
+        System.out.println("\n");
+    }
+}
